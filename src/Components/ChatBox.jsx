@@ -25,7 +25,7 @@ const chatBox = () => {
       <div className="basis-5/6">
         {messages?.map((message, index) => {
           return(
-          <div key={index} className={isUser?"bg-green-500 float-right w-3/4 p-3 mb-2":"bg-bgdark text-lime-300 float-left w-3/4 p-3 mb-2"}>
+          <div key={index} className={message.isUser?"bg-green-500 float-right w-3/4 p-3 mb-2":"bg-bgdark text-lime-300 float-left w-3/4 p-3 mb-2"}>
             {message.text}
 
           </div>
