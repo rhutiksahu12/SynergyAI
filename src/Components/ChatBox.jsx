@@ -6,10 +6,11 @@ import * as qs from 'qs'
 const chatBox = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
+  const api= import.meta.env.VITE_APP_BOT_RESPONSE_API;
 
   const handleSend = async (e) => {
     e.preventDefault();
-    const response = await axios.post("http://alpha.synergyos.ai/chat", qs.stringify({ 'question': input }));
+    const response = await axios.post("asd", qs.stringify({ 'question': input }));
     setMessages([...messages,
     { text: input, isUser: true },
     { text: response.request.response, isUser: false }
